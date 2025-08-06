@@ -1,0 +1,352 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  ArrowLeft,
+  Shield,
+  Headphones,
+  Monitor,
+  Globe,
+  Wifi,
+  CheckCircle,
+  ArrowRight,
+  Users,
+  Award,
+  Handshake,
+  Tv,
+  Video,
+  Network,
+} from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+const PartnersPage: React.FC = () => {
+  const partners = [
+    {
+      logo: 'Boe_Technology_Group_logo.svg.png', // Update with actual logo path
+      description:
+        'Global leader in display technology and semiconductor solutions.',
+      keyServices: [
+        'LCD Displays',
+        'OLED Displays',
+        'LCD Displays',
+        'Flexible Screens',
+      ],
+      specialties: [
+        'Display Innovation',
+        'Semiconductor Tech',
+        'Smart Manufacturing',
+      ],
+      color: 'from-indigo-500 to-blue-500',
+      established: '1993',
+      headquarters: 'China',
+      website: 'https://www.boe.com/en/',
+      specifications: {
+        resolution: 'Up to 8K UHD (7680×4320)',
+        brightness: 'Up to 1000 nits',
+        viewingAngle: '178° horizontal/vertical',
+        additionalSpecs: [
+          'HDR10+ Support',
+          'Wide Color Gamut (DCI-P3)',
+          'Low Blue Light Technology',
+          'Flexible & Foldable Options',
+        ],
+      },
+    },
+    {
+      logo: 'Vive-logo.png', // Update with actual logo path
+      description:
+        'Leading VR headset manufacturer and AR/VR innovation pioneer.',
+      keyServices: [
+        'HTC Vive Pro Series',
+        'Enterprise VR Solutions',
+        'VR Training Programs',
+      ],
+      specialties: [
+        'Virtual Reality',
+        'Enterprise Solutions',
+        'Training Systems',
+      ],
+      color: 'from-green-500 to-emerald-500',
+      established: '1997',
+      headquarters: 'Taiwan',
+      website: 'http://vive.com/us/',
+    },
+    {
+      logo: 'vview.png', // Update with actual logo path
+      description:
+        'Cutting-edge display technology and immersive visual solutions.',
+      keyServices: [
+        'Unlimited Source & secure content routing',
+        'Drag‑and‑drop layout , plug‑and‑play bundles',
+      ],
+      specialties: [
+        'Software based video wall controller',
+        'Video wall command & control room',
+        'Unified AV‑Over‑IP Video Wall Platform',
+      ],
+      color: 'from-blue-500 to-cyan-500',
+      established: '2015',
+      headquarters: 'India',
+      website: 'https://vviewtech.com/',
+    },
+    {
+      logo: 'kramer_logo.png', // Update with actual logo path
+      description:
+        'Professional AV solutions and connectivity technology experts.',
+      keyServices: [
+        'AV System Integration',
+        'Professional Audio',
+        'AV Collab Control',
+        'AVoIP',
+      ],
+      specialties: ['AV Integration', 'Professional Systems', 'Connectivity'],
+      color: 'from-purple-500 to-violet-500',
+      established: '1981',
+      headquarters: 'Israel',
+      website: 'https://www.kramerav.com/',
+    },
+  ];
+
+  const partnershipBenefits = [
+    {
+      icon: Award,
+      title: 'Certified Excellence',
+      description:
+        'All our partners maintain the highest industry certifications and standards.',
+    },
+    {
+      icon: Handshake,
+      title: 'Strategic Alliance',
+      description:
+        'Long-term partnerships focused on mutual growth and innovation.',
+    },
+    {
+      icon: Users,
+      title: 'Expert Local Support',
+      description:
+        'Access to dedicated technical teams and comprehensive training programs.',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-sm font-medium text-blue-700 mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              Trusted Partners
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Technology{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Partners
+              </span>
+            </h1>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We collaborate with industry-leading technology brands to deliver
+              comprehensive solutions that drive innovation and transform
+              businesses across various sectors.
+            </p>
+          </div>
+
+          {/* Partnership Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {partnershipBenefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Cards - Horizontal Layout */}
+      <section className="pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Meet Our Brands
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Discover the innovative companies we work with to deliver
+              cutting-edge technology solutions.
+            </p>
+          </div>
+
+          {/* Horizontal Partner Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className={`group bg-gradient-to-r ${partner.color} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col`}
+              >
+                {/* Card Header */}
+                <div className="bg-white p-6 relative">
+                  <div className="absolute inset-0 bg-gray-100/10"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-3">
+                      <img
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className="h-12 w-21 ml-0"
+                      />
+                      <div className="text-xl font-bold text-gray-900 text-right flex-1 ml-2">
+                        {partner.name}
+                      </div>
+                    </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {partner.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  {/* Specialties */}
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-white mb-2 text-xs uppercase tracking-wider">
+                      Specialties
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {partner.specialties.map((specialty, specialtyIndex) => (
+                        <span
+                          key={specialtyIndex}
+                          className="px-2 py-1 bg-white/20 text-white rounded-full text-xs font-medium"
+                        >
+                          {specialty}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Key Services */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-white mb-2 text-xs uppercase tracking-wider">
+                      Key Services
+                    </h4>
+                    <div className="space-y-1">
+                      {partner.keyServices.map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="flex items-center">
+                          <CheckCircle className="w-3 h-3 text-white mr-2 flex-shrink-0" />
+                          <span className="text-white text-xs">{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="mt-auto flex gap-3">
+                    {/* Solutions Button */}
+                    <a
+                      href={
+                        partner.logo.includes('Vive-logo')
+                          ? '/htc-solutions'
+                          : partner.logo.includes('Boe')
+                          ? '/boe-solutions'
+                          : partner.logo.includes('vview')
+                          ? '/vview-solutions'
+                          : partner.logo.includes('kramer')
+                          ? '/kramer-solutions'
+                          : partner.logo.includes('automate')
+                          ? '/property-automate-solutions'
+                          : partner.logo.includes('tele')
+                          ? '/tele-presenz-solutions'
+                          : partner.logo.includes('nano')
+                          ? '/nano-precise-solutions'
+                          : partner.logo.includes('dst')
+                          ? '/disruptive-technologies-solutions'
+                          : partner.logo.includes('Untitled-3')
+                          ? '/aila-solutions'
+                          : '#'
+                      }
+                      className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
+                    >
+                      Solutions
+                    </a>
+
+                    {/* Website Button */}
+                    {partner.website && (
+                      <a
+                        href={partner.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
+                      >
+                        Website
+                        <ArrowRight className="w-3 h-3 ml-1" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Information Section */}
+      <section className="pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Why Choose Our Brand Network?
+              </h3>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Our carefully selected partners represent the best in their
+                respective fields, ensuring you receive world-class technology
+                solutions backed by industry expertise and proven track records.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Explore Our Solutions?
+            </h2>
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Contact us to learn more about how our partner technologies can
+              transform your business and drive innovation in your industry.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+    </div>
+  );
+};
+
+export default PartnersPage;
