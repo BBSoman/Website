@@ -54,7 +54,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'Vive-logo.png',
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-7 w-21',
       description:
         'Leading VR headset manufacturer and AR/VR innovation pioneer.',
       keyServices: [
@@ -74,7 +74,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'vview.png',
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-7 w-21',
       description:
         'Cutting-edge display technology and immersive visual solutions.',
       keyServices: [
@@ -93,7 +93,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'kramer_logo.png',
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-7 w-21',
       description:
         'Professional AV solutions and connectivity technology experts.',
       keyServices: [
@@ -131,8 +131,7 @@ const PartnersPage: React.FC = () => {
     {
       logo: 'ai-la.png',
       logoSize: 'h-12 w-17',
-      description:
-        'Innovative wireless communication and IoT connectivity solutions.',
+      description: 'innovative product solutions for smart communication.',
       keyServices: [
         'Wireless Networks',
         'IoT Connectivity',
@@ -193,7 +192,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'ashton.png',
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-11 w-21',
       description:
         'A new way to deploy Audio Visual technology in meeting spaces',
       keyServices: [
@@ -221,7 +220,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'nuera copy.png',
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-11 w-21',
       description:
         'Provider of advanced communication solutions for businesses, enhancing connectivity.',
       keyServices: [
@@ -295,7 +294,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'roboro.png', // Make sure to add the logo image in your project
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-11 w-21',
       description:
         'Automated FIBC and textile inspection solutions using AI machine vision.',
       keyServices: [
@@ -316,7 +315,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'deepqai copy.png', // Make sure to add the logo image in your project
-      logoSize: 'h-12 w-15',
+      logoSize: 'h-11 w-15',
       description: 'AI-driven solutions for optimizing business processes.',
       keyServices: [
         'AI Solutions',
@@ -333,6 +332,38 @@ const PartnersPage: React.FC = () => {
       established: '2020',
       headquarters: 'United States',
       website: 'https://www.deepq.ai/',
+    },
+    {
+      logo: 'polytron copy.png', // Make sure to add the logo image in your project
+      logoSize: 'h-11 w-21',
+      description:
+        'Next-gen AI-powered 3D spatial-aware 360 4K camera solutions.',
+      keyServices: [
+        '3D Spatial-Aware Cameras',
+        'AI-Powered Imaging Solutions',
+        '360-Degree Video Capture',
+      ],
+      specialties: ['AI Technology', '3D Imaging', 'Video Solutions'],
+      color: 'from-yellow-500 to-orange-500',
+      established: '2024',
+      headquarters: 'Singapore',
+      website: 'https://polytron.ai/',
+    },
+    {
+      logo: 'vizzio copy.png', // Make sure to add the logo image in your project
+      logoSize: 'h-10 w-21',
+      description:
+        'Revolutionizing the world with 3D digital twins and AI-powered solutions for urban environments.',
+      keyServices: [
+        '3D City Modeling',
+        'Geospatial Data Analysis',
+        'AI-Powered Solutions',
+      ],
+      specialties: ['Urban Planning', 'Smart Cities', 'Real Estate'],
+      color: 'from-pink-500 to-red-500',
+      established: '2020',
+      headquarters: 'Singapore',
+      website: 'https://vizzio.ai/',
     },
   ];
 
@@ -465,6 +496,10 @@ const PartnersPage: React.FC = () => {
                           ? '/robro-systems-solutions'
                           : partner.logo.includes('deep')
                           ? '/deepq-solutions'
+                          : partner.logo.includes('polytron copy')
+                          ? '/polytron-solutions'
+                          : partner.logo.includes('vizzio copy')
+                          ? '/vizzio-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
