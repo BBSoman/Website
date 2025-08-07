@@ -20,6 +20,8 @@ import ViverseSolutionsPage from './pages/ViverseSolutionPage';
 import ReignsSolutionsPage from './pages/ReignsSolutionsPage';
 import RobroSystemsSolutionsPage from './pages/RobroSystemsSolutionsPage';
 import DeepQSolutionsPage from './pages/DeepQSolutionsPage';
+import PolytronSolutionsPage from './pages/PolytronSolutionsPage';
+import VizzioSolutionsPage from './pages/VizzioSolutionsPage';
 
 function App() {
   return (
@@ -54,9 +56,7 @@ function App() {
           path="/Ashton-bentley-solutions"
           element={<AshtonBentleySolutionPage />}
         />
-
         <Route path="/Nuera-solutions" element={<NueraSolutionsPage />} />
-
         <Route path="/Zeevee-solutions" element={<ZeeveeSolutionPage />} />
         <Route path="/Viverse-solutions" element={<ViverseSolutionsPage />} />
         <Route path="/reigns-solutions" element={<ReignsSolutionsPage />} />
@@ -65,6 +65,8 @@ function App() {
           element={<RobroSystemsSolutionsPage />}
         />
         <Route path="/deepq-solutions" element={<DeepQSolutionsPage />} />
+        <Route path="/polytron-solutions" element={<PolytronSolutionsPage />} />
+        <Route path="/vizzio-solutions" element={<VizzioSolutionsPage />} />
       </Routes>
     </div>
   );
