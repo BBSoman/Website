@@ -43,7 +43,7 @@ const Services: React.FC = () => {
         '3D Visualization',
       ],
       gradient: 'from-green-500 to-teal-500',
-      image: 'glasses.png',
+      image: 'htcvr.png',
     },
     {
       icon: ComputerIcon,
