@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed',
-          opacity: 0.6, // Adjust for desired blend
+          opacity: 0.8, // Adjust for desired blend
         }}
       />
 
