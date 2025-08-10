@@ -29,7 +29,7 @@ const Services: React.FC = () => {
         'Product Visualization',
       ],
       gradient: 'from-purple-500 to-pink-500',
-      image: '/industry.jpg', // Must be in public/
+      image: '/women.png', // Must be in public/
     },
     {
       icon: Zap,
