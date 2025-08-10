@@ -9,6 +9,11 @@ import {
   PlugZap2Icon,
   ComputerIcon,
   Network,
+  CpuIcon,
+  GlassesIcon,
+  Earth,
+  EarthLockIcon,
+  Computer,
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -4278,6 +4283,123 @@ const ProductsPage: React.FC = () => {
       ],
     },
   ];
+  const polytronvision32versions: ProductVersion[] = [
+    {
+      name: 'Polytron Vision 32"',
+      screenSize: '32 inches',
+      resolution: '1920 × 1080 (Full HD)',
+      brightness: '400 cd/m²',
+      contrast: '1200:1',
+      viewingAngle: '178°/178°',
+      responseTime: '6ms',
+      colorGamut: '16.7M',
+      features: [
+        'Full HD Resolution',
+        'Interactive Touch Screen',
+        'Multiple Connectivity Options',
+        'Slim Design',
+        'Built-in Speakers',
+      ],
+      applications: [
+        'Retail Displays',
+        'Corporate Presentations',
+        'Digital Signage',
+        'Education',
+      ],
+      specifications: {
+        'Panel Type': 'IPS LCD',
+        Backlight: 'LED',
+        'Aspect Ratio': '16:9',
+        'Pixel Pitch': '0.2745mm',
+        'Refresh Rate': '60Hz',
+        HDMI: '2 ports',
+        USB: '2 ports',
+        'Power Consumption': '≤ 70W',
+        Dimensions: '730 × 430 × 50 mm',
+        Weight: '8 kg',
+        'Operating Temperature': '0 ~ 50 °C',
+        'Operating Humidity': '20% ~ 80% RH',
+      },
+    },
+  ];
+
+  const polytronvision43version: ProductVersion[] = [
+    {
+      name: 'Polytron Vision 43"',
+      screenSize: '43 inches',
+      resolution: '1920 × 1080 (Full HD)',
+      brightness: '450 cd/m²',
+      contrast: '1200:1',
+      viewingAngle: '178°/178°',
+      responseTime: '6ms',
+      colorGamut: '16.7M',
+      features: [
+        'Full HD Resolution',
+        'Interactive Touch Screen',
+        'Multiple Connectivity Options',
+        'Slim Design',
+        'Built-in Speakers',
+      ],
+      applications: [
+        'Retail Displays',
+        'Corporate Presentations',
+        'Digital Signage',
+        'Education',
+      ],
+      specifications: {
+        'Panel Type': 'IPS LCD',
+        Backlight: 'LED',
+        'Aspect Ratio': '16:9',
+        'Pixel Pitch': '0.2745mm',
+        'Refresh Rate': '60Hz',
+        HDMI: '2 ports',
+        USB: '2 ports',
+        'Power Consumption': '≤ 90W',
+        Dimensions: '970 × 570 × 50 mm',
+        Weight: '10 kg',
+        'Operating Temperature': '0 ~ 50 °C',
+        'Operating Humidity': '20% ~ 80% RH',
+      },
+    },
+  ];
+
+  const polytron360version: ProductVersion = [
+    {
+      name: 'Polytron 360 55"',
+      screenSize: '55 inches',
+      resolution: '3840 × 2160 (4K UHD)',
+      brightness: '600 cd/m²',
+      contrast: '1500:1',
+      viewingAngle: '178°/178°',
+      responseTime: '5ms',
+      colorGamut: '1.07B',
+      features: [
+        '4K UHD Resolution',
+        '360-Degree Viewing',
+        'Interactive Capabilities',
+        'Multiple Connectivity Options',
+        'Robust Build Quality',
+      ],
+      applications: [
+        'Exhibitions',
+        'Events',
+        'Retail Displays',
+        'Corporate Presentations',
+      ],
+      specifications: {
+        'Panel Type': 'OLED',
+        'Aspect Ratio': '16:9',
+        'Refresh Rate': '60Hz',
+        HDMI: '3 ports',
+        USB: '2 ports',
+        'Power Consumption': '≤ 150W',
+        Dimensions: '1200 × 700 × 100 mm',
+        Weight: '15 kg',
+        'Operating Temperature': '0 ~ 50 °C',
+        'Operating Humidity': '20% ~ 80% RH',
+      },
+    },
+  ];
 
   const partners: Partner[] = [
     {
@@ -5253,6 +5375,119 @@ const ProductsPage: React.FC = () => {
         },
       ],
     },
+    {
+      id: 'Polytron',
+      name: 'Polytron',
+      logo: 'polytron copy.png',
+      color: 'from-orange-600 to-red-600',
+      products: [
+        {
+          id: 'Polytron Vision 32"',
+          name: 'Polytron Vision ',
+          category: 'Smart Displays',
+          description:
+            'Polytron Vision is an advanced smart display solution designed for interactive experiences in retail and corporate environments.',
+          partnerDescription:
+            'Featuring high-resolution displays with touch capabilities, Polytron Vision integrates seamlessly with various applications for enhanced user engagement.',
+          versions: [...polytronvision32versions, ...polytronvision43version],
+          icon: GlassesIcon, // Use an appropriate icon
+          color: 'from-orange-600 to-red-600',
+          image: 'polytron.png',
+        },
+        {
+          id: 'Polytron 360',
+          name: 'Polytron 360 ',
+          category: '360-Degree Displays',
+          description:
+            'Polytron 360 offers immersive 360-degree viewing experiences, perfect for exhibitions and events.',
+          partnerDescription:
+            'With advanced display technology, Polytron 360 creates stunning visuals that captivate audiences and enhance engagement.',
+          versions: polytron360version,
+          icon: Computer, // Use an appropriate icon
+          color: 'from-orange-600 to-red-600',
+          image: '360poly.jpg',
+        },
+      ],
+    },
+    {
+      id: 'vizzio',
+      name: 'Vizzio',
+      logo: 'vizzio copy.png', // Add the logo for Vizzio
+      color: 'from-green-400 to-blue-500', // Choose a color gradient for Vizzio
+      products: [
+        {
+          id: 'earth-ai',
+          name: 'Earth AI',
+          category: 'AI Solutions',
+          description:
+            'Earth AI is a powerful AI-driven platform designed to analyze and visualize geospatial data, providing insights for various applications.',
+          partnerDescription:
+            'Utilizing advanced algorithms and machine learning techniques, Earth AI transforms complex geospatial data into actionable insights, enabling better decision-making for businesses and organizations.',
+          versions: [
+            {
+              name: 'Earth AI Platform',
+              features: [
+                'AI-driven geospatial analysis',
+                'Real-time data visualization',
+                'User -friendly interface',
+                'Customizable dashboards',
+                'Integration with various data sources',
+              ],
+              applications: [
+                'Environmental monitoring',
+                'Urban planning',
+                'Disaster management',
+                'Resource management',
+              ],
+              specifications: {
+                'Data Sources': 'Satellite imagery, sensor data, and more',
+                'Processing Power': 'Cloud-based processing for scalability',
+                'User  Access': 'Web-based platform with multi-user support',
+              },
+            },
+          ],
+          icon: Earth, // Use an appropriate icon
+          color: 'from-green-400 to-blue-500', // Choose a gradient color for Earth AI
+          image: 'vizzio1.png', // Add an image for the Earth AI product
+        },
+        {
+          id: 'polytron-ai',
+          name: 'Polytron AI',
+          category: 'AI Solutions',
+          description:
+            'Polytron AI leverages advanced artificial intelligence to enhance operational efficiency and decision-making processes across various industries.',
+          partnerDescription:
+            'With its robust algorithms and machine learning capabilities, Polytron AI provides actionable insights and predictive analytics to drive business success.',
+          versions: [
+            {
+              name: 'Polytron AI Platform',
+              features: [
+                'Advanced machine learning algorithms',
+                'Predictive analytics for business insights',
+                'User -friendly interface for easy navigation',
+                'Integration with existing systems',
+                'Real-time data processing and visualization',
+              ],
+              applications: [
+                'Business intelligence',
+                'Operational efficiency',
+                'Predictive maintenance',
+                'Customer insights',
+              ],
+              specifications: {
+                'Data Sources':
+                  'Various data inputs including IoT devices and databases',
+                'Processing Power': 'Cloud-based for scalability',
+                'User  Access': 'Web-based platform with multi-user support',
+              },
+            },
+          ],
+          icon: EarthLockIcon, // Use an appropriate icon
+          color: 'from-pink-400 to-purple-500', // Choose a gradient color for Polytron AI
+          image: 'vizzio copy.png', // Add an image for the Polytron AI product
+        },
+      ],
+    },
   ];
 
   const handlePartnerSelect = (partnerId: string) => {
@@ -5531,7 +5766,8 @@ const ProductsPage: React.FC = () => {
               {/* Show comparison table only for BOE/AI-LA products with multiple versions */}
               {(selectedPartner === 'boe' ||
                 selectedPartner === 'ai-la' ||
-                selectedPartner === 'Nuera Commuincations') &&
+                selectedPartner === 'Nuera Commuincations' ||
+                selectedPartner === 'Polytron') &&
               selectedProductData.versions.length > 1 ? (
                 <ComparisonTable
                   productName={selectedProductData.name}
