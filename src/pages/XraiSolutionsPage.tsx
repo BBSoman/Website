@@ -161,13 +161,17 @@ const XraiSolutionsPage: React.FC = () => {
               </a>
               <div className="mt-8">
               </div>
-                              <a
+            </div>
+               <div className="mt-8">
+            <div>
+                       <a
                   href="/partners"
                   className="inline-block bg-gray-200 text-gray-800 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-all"
                 >
                   Back to Brands
                 </a>
             </div>
+               </div>
           </div>
         </div>
       </section>
