@@ -15,6 +15,9 @@ import {
   Tv,
   Video,
   Network,
+  Subtitles,
+  Languages,
+  Radio,
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -365,6 +368,26 @@ const PartnersPage: React.FC = () => {
       headquarters: 'Singapore',
       website: 'https://vizzio.ai/',
     },
+    {
+      logo: 'xrai.png', // You'll need to add this logo to the public folder
+      logoSize: 'h-10 w-21',
+      description:
+        'Revolutionary AI-powered real-time transcription and translation solutions for accessibility and communication.',
+      keyServices: [
+        'Real-time Subtitles',
+        'Multilingual Translation',
+        'Live Streaming Subtitles',
+      ],
+      specialties: [
+        'AI Transcription',
+        'Real-time Translation',
+        'Accessibility Solutions',
+      ],
+      color: 'from-cyan-500 to-blue-500',
+      established: '2020',
+      headquarters: 'United Kingdom',
+      website: 'https://xrai.glass/',
+    },
   ];
 
   const partnershipBenefits = [
@@ -500,6 +523,8 @@ const PartnersPage: React.FC = () => {
                           ? '/polytron-solutions'
                           : partner.logo.includes('vizzio copy')
                           ? '/vizzio-solutions'
+                          : partner.logo.includes('xrai.png')
+                          ? '/xrai-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
