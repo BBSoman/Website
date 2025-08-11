@@ -22,6 +22,7 @@ import RobroSystemsSolutionsPage from './pages/RobroSystemsSolutionsPage';
 import DeepQSolutionsPage from './pages/DeepQSolutionsPage';
 import PolytronSolutionsPage from './pages/PolytronSolutionsPage';
 import VizzioSolutionsPage from './pages/VizzioSolutionsPage';
+import XraiSolutionsPage from './pages/XraiSolutionsPage';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path="/deepq-solutions" element={<DeepQSolutionsPage />} />
         <Route path="/polytron-solutions" element={<PolytronSolutionsPage />} />
         <Route path="/vizzio-solutions" element={<VizzioSolutionsPage />} />
+         <Route path="/xrai-solutions" element={<XraiSolutionsPage />} /> 
       </Routes>
     </div>
   );
