@@ -18,8 +18,8 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/BBSMAIN_2.png" 
-              alt="Bright Business Solutions Logo" 
+              src="/service horizontal.png" 
+              alt="Bright Business Services Logo" 
               className="h-10 w-auto object-contain"
             />
           </Link>
