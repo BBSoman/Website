@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
              <Link to="/" className="flex items-center space-x-3">
-            <img src="/BBSMAIN.png" alt="Bright Business Solutions Logo" className="h-8 w-auto mb-4" />
+            <img src="/service horizontal.png" alt="Bright Business Services Logo" className="h-8 w-auto mb-4" />
              </Link>        
             <p className="text-gray-400 mb-6 max-w-md">
-              Leading provider of cutting-edge technology solutions. 
+              Leading provider of cutting-edge technology services. 
               We partner with industry leaders to deliver innovative solutions that 
               transform businesses and drive growth.
             </p>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400">Get the latest news and updates from Bright Business Solutions.</p>
+              <p className="text-gray-400">Get the latest news and updates from Bright Business Services.</p>
             </div>
             <div className="flex w-full md:w-auto">
               <input
