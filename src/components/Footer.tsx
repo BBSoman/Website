@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 <Twitter className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
+                href="https://x.com/BBSolutionsOman"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
               >
                 <span className="sr-only">Facebook</span>
