@@ -5392,7 +5392,7 @@ const ProductsPage: React.FC = () => {
           versions: [...polytronvision32versions, ...polytronvision43version],
           icon: GlassesIcon, // Use an appropriate icon
           color: 'from-orange-600 to-red-600',
-          image: 'polytron.png',
+          image: 'polytron copy.png',
         },
         {
           id: 'Polytron 360',
