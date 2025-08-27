@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Eye, Zap, Lightbulb, ComputerIcon } from 'lucide-react';
+import { Brain, Eye, Zap, Lightbulb, ComputerIcon, Video } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -59,6 +59,20 @@ const Services: React.FC = () => {
       gradient: 'from-orange-500 to-red-500',
       image: 'industry.jpg',
     },
+     {
+  icon: Video,
+  title: 'Audio-Visual Solutions',
+  description:
+    'Cutting-edge AV solutions that blend sound and visual technologies to deliver immersive communication, impactful presentations, and engaging experiences for events, workplaces, and digital platforms.',
+  features: [
+    'High-Definition Video',
+    'Crystal-Clear Audio',
+    'Live Streaming',
+    'Interactive Displays',
+  ],
+  gradient: 'from-purple-500 to-indigo-500',
+  image: 'av.jpg',
+},
   ];
 
   return (
