@@ -7,7 +7,7 @@ import ProductsPage from './pages/ProductsPage';
 import HTCSolutionsPage from './pages/HTCSolutionsPage';
 import BOESolutionsPage from './pages/BOESolutionsPage';
 import VVIEWSolutionsPage from './pages/VVIEWSolutionsPage';
-//import KRAMERSolutionsPage from './pages/KRAMERSolutionsPage';
+import KRAMERSolutionsPage from './pages/KRAMERSolutionsPage';
 import PropertyautomateSolutionsPage from './pages/PropertyautomateSolutionsPage';
 import TelePresenzSolutionsPage from './pages/TelePresenzSolutionsPage';
 import NanoPreciseSolutionsPage from './pages/NanoPreciseSolutionsPage';
