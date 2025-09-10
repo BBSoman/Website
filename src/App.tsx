@@ -34,7 +34,6 @@ function App() {
         <Route path="/htc-solutions" element={<HTCSolutionsPage />} />
         <Route path="/boe-solutions" element={<BOESolutionsPage />} />
         <Route path="/vview-solutions" element={<VVIEWSolutionsPage />} />
-        <Route path="/kramer-solutions" element={<KRAMERSolutionsPage />} />
         <Route
           path="/property-automate-solutions"
           element={<PropertyautomateSolutionsPage />}
