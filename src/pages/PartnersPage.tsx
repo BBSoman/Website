@@ -95,23 +95,6 @@ const PartnersPage: React.FC = () => {
       website: 'https://vviewtech.com/',
     },
     {
-      logo: 'kramer_logo.png',
-      logoSize: 'h-7 w-21',
-      description:
-        'Professional AV solutions and connectivity technology experts.',
-      keyServices: [
-        'AV System Integration',
-        'Professional Audio',
-        'AV Collab Control',
-        'AVoIP',
-      ],
-      specialties: ['AV Integration', 'Professional Systems', 'Connectivity'],
-      color: 'from-purple-500 to-violet-500',
-      established: '1981',
-      headquarters: 'Israel',
-      website: 'https://www.kramerav.com/',
-    },
-    {
       logo: 'automate.png',
       logoSize: 'h-12 w-21',
       description:
