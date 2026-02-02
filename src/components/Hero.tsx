@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Bright Business Solutions specializes in cutting-edge artificial
+              Bright Business Services specializes in cutting-edge artificial
               intelligence, augmented reality, and virtual reality technologies.
               We partner with industry leaders to deliver innovative solutions
               that drive your business forward.
