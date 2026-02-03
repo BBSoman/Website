@@ -530,7 +530,7 @@ const PartnersPage: React.FC = () => {
                           ? '/vizzio-solutions'
                           : partner.logo.includes('xrai.png')
                           ? '/xrai-solutions'
-                          : partner.logo.includes('mago.png')
+                          : partner.logo.includes('mago2.png')
                           ? '/mago-solutions'
                           : '#'
 
