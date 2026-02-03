@@ -371,6 +371,28 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United Kingdom',
       website: 'https://xrai.glass/',
     },
+        {
+
+      logo: 'mago.png', // Add the Mago logo image to your project
+      logoSize: 'h-10 w-21',
+      description:
+        'AI-powered real-time translation and communication solutions for seamless multilingual interactions.',
+      keyServices: [
+        'Real-Time Translation',
+        'AI Assistant',
+        'Speaker Identification',
+        'Smart Glasses Integration',
+      ],
+      specialties: [
+        'Multilingual Support',
+        'AI-Driven Communication',
+        'Immersive Translation',
+      ],
+      color: 'from-purple-500 to-pink-500',
+      established: '2020',
+      headquarters: 'United States',
+      website: 'https://mago.io/',
+    },
   ];
 
   const partnershipBenefits = [
@@ -508,7 +530,10 @@ const PartnersPage: React.FC = () => {
                           ? '/vizzio-solutions'
                           : partner.logo.includes('xrai.png')
                           ? '/xrai-solutions'
+                          : partner.logo.includes('mago.png')
+                          ? '/mago-solutions'
                           : '#'
+
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
                     >
