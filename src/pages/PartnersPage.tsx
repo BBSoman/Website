@@ -374,7 +374,7 @@ const PartnersPage: React.FC = () => {
         {
 
       logo: 'mago.png', // Add the Mago logo image to your project
-      logoSize: 'h-13 w-21',
+      logoSize: 'h-12 w-21',
       description:
         'AI-powered real-time translation and communication solutions for seamless multilingual interactions.',
       keyServices: [
