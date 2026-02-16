@@ -414,6 +414,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United States',
       website: 'https://www.nearity.co/',
     },
+    {
+      logo: 'weblib.png', // Add the Weblib logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'Innovative web library solutions for seamless digital experiences and content management.',
+      keyServices: [
+        'Web Libraries',
+        'Digital Content Management',
+        'API Integrations',
+        'Custom Web Solutions',
+      ],
+      specialties: [
+        'Web Development',
+        'Content Delivery',
+        'Digital Innovation',
+      ],
+      color: 'from-blue-500 to-indigo-500',
+      established: '2020', // Placeholder; update with actual data
+      headquarters: 'United States', // Placeholder; update with actual data
+      website: 'https://weblib.com/',
+    },
   ];
 
   const partnershipBenefits = [
