@@ -600,7 +600,7 @@ const PartnersPage: React.FC = () => {
                           : partner.logo.includes('weblib')
                           ? '/weblib-solutions'
                           : partner.logo.includes('gonitro')
-                          ? '/go-nitro-solutions'
+                          ? '/gonitro-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
