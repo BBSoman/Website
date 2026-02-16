@@ -24,6 +24,7 @@ import VizzioSolutionsPage from './pages/VizzioSolutionsPage';
 import XraiSolutionsPage from './pages/XraiSolutionsPage';
 import MagoSolutionsPage from './pages/MagoSolutionsPage';
 import NearitySolutionsPage from './pages/NearitySolutionsPage';
+import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
          <Route path="/xrai-solutions" element={<XraiSolutionsPage />} /> 
          <Route path="/mago-solutions" element={<MagoSolutionsPage />} />
         <Route path="/nearity-solutions" element={<NearitySolutionsPage />} />
+       <Route path="/weblib-solutions" element={<WeblibSolutionsPage />} />
       </Routes>
     </div>
   );
