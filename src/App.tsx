@@ -23,6 +23,7 @@ import PolytronSolutionsPage from './pages/PolytronSolutionsPage';
 import VizzioSolutionsPage from './pages/VizzioSolutionsPage';
 import XraiSolutionsPage from './pages/XraiSolutionsPage';
 import MagoSolutionsPage from './pages/MagoSolutionsPage';
+import NearitySolutionsPage from './pages/NearitySolutionsPage';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
         <Route path="/vizzio-solutions" element={<VizzioSolutionsPage />} />
          <Route path="/xrai-solutions" element={<XraiSolutionsPage />} /> 
          <Route path="/mago-solutions" element={<MagoSolutionsPage />} />
+        <Route path="/nearity-solutions" element={<NearitySolutionsPage />} />
       </Routes>
     </div>
   );
