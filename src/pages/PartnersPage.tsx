@@ -599,7 +599,7 @@ const PartnersPage: React.FC = () => {
                           ? '/nearity-solutions'
                           : partner.logo.includes('weblib')
                           ? '/weblib-solutions'
-                          : partner.logo.includes('nitro-logo.png')
+                          : partner.logo.includes('gonitro.png')
                           ? '/go-nitro-solutions'
                           : '#'
                       }
