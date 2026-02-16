@@ -436,7 +436,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://weblib.com/',
     },
     {
-      logo: 'nitro-logo.png', // Add the Nitro PDF logo image to your project
+      logo: 'gonitro.png', // Add the Nitro PDF logo image to your project
       logoSize: 'h-12 w-21',
       description:
         'Leading provider of PDF productivity solutions for creating, editing, and managing documents.',
