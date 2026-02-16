@@ -393,6 +393,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United States',
       website: 'https://mago.io/',
     },
+    {
+      logo: 'nearity.png', // Add the Nearity logo image to your project
+      logoSize: 'h-11 w-21',
+      description:
+        'Advanced spatial computing and proximity-based technology solutions for immersive experiences.',
+      keyServices: [
+        'Spatial Computing',
+        'Proximity Detection',
+        'AR Integration',
+        'Location-Based Services',
+      ],
+      specialties: [
+        'Spatial Technology',
+        'AR/VR Enhancements',
+        'Proximity Solutions',
+      ],
+      color: 'from-green-500 to-teal-500',
+      established: '2021',
+      headquarters: 'United States',
+      website: 'https://www.nearity.co/',
+    },
   ];
 
   const partnershipBenefits = [
@@ -532,7 +553,10 @@ const PartnersPage: React.FC = () => {
                           ? '/xrai-solutions'
                           : partner.logo.includes('mago2.png')
                           ? '/mago-solutions'
+                          : partner.logo.includes('nearity')
+                          ? '/nearity-solutions'
                           : '#'
+
 
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
