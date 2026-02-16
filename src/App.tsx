@@ -25,7 +25,7 @@ import XraiSolutionsPage from './pages/XraiSolutionsPage';
 import MagoSolutionsPage from './pages/MagoSolutionsPage';
 import NearitySolutionsPage from './pages/NearitySolutionsPage';
 import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
-
+import GoNitroPage from './pages/GoNitroPage';
 
 function App() {
   return (
@@ -74,7 +74,7 @@ function App() {
          <Route path="/mago-solutions" element={<MagoSolutionsPage />} />
         <Route path="/nearity-solutions" element={<NearitySolutionsPage />} />
        <Route path="/weblib-solutions" element={<WeblibSolutionsPage />} />
-
+ <Route path="/go-nitro-solutions" element={<GoNitroPage />} />
       </Routes>
     </div>
   );
