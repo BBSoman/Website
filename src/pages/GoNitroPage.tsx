@@ -160,4 +160,4 @@ const GoNitroPage: React.FC = () => {
   );
 };
 
-export default GoNitroSolutionsPage;
+export default GoNitroPage;
