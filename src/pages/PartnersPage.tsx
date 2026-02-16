@@ -456,6 +456,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United States',
       website: 'https://www.gonitro.com/',
     },
+    {
+       logo: 'nearstream.png', // Add the Nearstream logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'Advanced streaming solutions for real-time data and media delivery.',
+      keyServices: [
+        'Live Streaming',
+        'Data Streaming',
+        'Real-Time Analytics',
+        'Media Delivery',
+      ],
+      specialties: [
+        'Streaming Technology',
+        'Real-Time Processing',
+        'Content Distribution',
+      ],
+      color: 'from-cyan-500 to-blue-500',
+      established: '2020',
+      headquarters: 'United States',
+      website: 'https://www.nearstream.us/',
+    },
   ];
 
   const partnershipBenefits = [
@@ -601,6 +622,8 @@ const PartnersPage: React.FC = () => {
                           ? '/weblib-solutions'
                           : partner.logo.includes('gonitro.png')
                           ? '/go-nitro-solutions'
+                          : partner.logo.includes('nearstream')
+                          ? '/nearstream-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
