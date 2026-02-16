@@ -26,6 +26,7 @@ import MagoSolutionsPage from './pages/MagoSolutionsPage';
 import NearitySolutionsPage from './pages/NearitySolutionsPage';
 import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
 import GoNitroPage from './pages/GoNitroPage';
+import NearstreamSolutionsPage from './pages/NearstreamSolutionsPage';
 
 function App() {
   return (
@@ -70,11 +71,12 @@ function App() {
         <Route path="/deepq-solutions" element={<DeepQSolutionsPage />} />
         <Route path="/polytron-solutions" element={<PolytronSolutionsPage />} />
         <Route path="/vizzio-solutions" element={<VizzioSolutionsPage />} />
-         <Route path="/xrai-solutions" element={<XraiSolutionsPage />} /> 
-         <Route path="/mago-solutions" element={<MagoSolutionsPage />} />
-        <Route path="/nearity-solutions" element={<NearitySolutionsPage />} />
+       <Route path="/xrai-solutions" element={<XraiSolutionsPage />} /> 
+       <Route path="/mago-solutions" element={<MagoSolutionsPage />} />
+       <Route path="/nearity-solutions" element={<NearitySolutionsPage />} />
        <Route path="/weblib-solutions" element={<WeblibSolutionsPage />} />
- <Route path="/go-nitro-solutions" element={<GoNitroPage />} />
+       <Route path="/go-nitro-solutions" element={<GoNitroPage />} />
+       <Route path="/nearstream-solutions" element={<NearstreamSolutionsPage />} />
       </Routes>
     </div>
   );
