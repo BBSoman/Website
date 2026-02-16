@@ -435,6 +435,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United States', // Placeholder; update with actual data
       website: 'https://weblib.com/',
     },
+    {
+      logo: 'nitro-logo.png', // Add the Nitro PDF logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'Leading provider of PDF productivity solutions for creating, editing, and managing documents.',
+      keyServices: [
+        'PDF Creation',
+        'PDF Editing',
+        'PDF Conversion',
+        'Document Collaboration',
+      ],
+      specialties: [
+        'PDF Technology',
+        'Document Management',
+        'Digital Workflows',
+      ],
+      color: 'from-red-500 to-pink-500',
+      established: '2005',
+      headquarters: 'United States',
+      website: 'https://www.gonitro.com/',
+    },
   ];
 
   const partnershipBenefits = [
@@ -578,6 +599,8 @@ const PartnersPage: React.FC = () => {
                           ? '/nearity-solutions'
                           : partner.logo.includes('weblib')
                           ? '/weblib-solutions'
+                          : partner.logo.includes('nitro pdf')
+                          ? '/nitro-pdf-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
