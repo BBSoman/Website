@@ -10,6 +10,252 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="text/javascript" src="https://res.public.onecdn.static.microsoft/customerconnect/v1/7dttl/init.js" id="chatbot" environmentId="f8ecfd2d-d642-e153-806d-6d69ae2884d9" crossorigin="anonymous"></script>
+   <!-- BBS MICROSOFT TEAMS + LIVE REP + FORM FLOW -->
+<script type="text/javascript" 
+  src="https://res.public.onecdn.static.microsoft/customerconnect/v1/7dttl/init.js" 
+  id="chatbot" 
+  environmentId="f8ecfd2d-d642-e153-806d-6d69ae2884d9" 
+  crossorigin="anonymous">
+</script>
+
+<script>
+(function() {
+  let conversationStep = 0; // 0=welcome, 1=name, 2=email, 3=phone, 4=interests, 5=complete
+  let userData = { name: '', email: '', phone: '', country: '+1', interests: '' };
+  let liveRepActive = false;
+  let repJoined = false;
+
+  const countryCodes = [
+    {code:'+1',name:'USA (+1)'}, {code:'+44',name:'UK (+44)'}, {code:'+91',name:'India (+91)'},
+    {code:'+971',name:'UAE (+971)'}, {code:'+65',name:'Singapore (+65)'}, {code:'+61',name:'Australia (+61)'},
+    {code:'+49',name:'Germany (+49)'}, {code:'+33',name:'France (+33)'}
+  ];
+
+  // Wait for Teams widget
+  function waitForWidget(callback, maxAttempts = 30) {
+    let attempts = 0;
+    function check() {
+      attempts++;
+      const widget = document.querySelector('#customerconnect-widget');
+      if (widget || attempts >= maxAttempts) {
+        callback(widget);
+      } else {
+        setTimeout(check, 500);
+      }
+    }
+    check();
+  }
+
+  // Add styled bot message
+  function addBotMessage(text, widget, isUser = false) {
+    const msgDiv = document.createElement('div');
+    msgDiv.style.cssText = `
+      padding: 12px 18px; margin: 6px 16px; border-radius: 20px; max-width: 85%;
+      font-size: 14.5px; line-height: 1.45; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      animation: fadeInUp 0.4s ease; word-wrap: break-word;
+      ${!isUser ? 'background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-bottom-right-radius: 6px; margin-left: auto;' : 
+        'background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; margin-right: auto;'}
+    `;
+    msgDiv.innerHTML = text;
+    
+    const container = widget?.querySelector('.messages-container, .chat-messages, [role="log"], .chat-container') || widget;
+    if (container) {
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+  }
+
+  // Live rep detection
+  function detectLiveRep(widget) {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          const newNodes = Array.from(mutation.addedNodes);
+          newNodes.forEach(node => {
+            if (node.nodeType === 1) { // Element node
+              const text = node.textContent || '';
+              if (text.toLowerCase().includes('agent') || text.toLowerCase().includes('joined') || 
+                  text.includes('live') || text.includes('representative')) {
+                liveRepActive = true;
+                repJoined = true;
+                addBotMessage("👨‍💼 Live Sales Rep Connected!<br>📞 You can now chat directly<br>👇 Your info saved: " + 
+                  `<strong>${userData.name}</strong> | ${userData.email}`, widget);
+              }
+            }
+          });
+        }
+      });
+    });
+    observer.observe(widget, { childList: true, subtree: true });
+  }
+
+  // Handle user input
+  function setupInputHandler(widget) {
+    const input = widget?.querySelector('input[type="text"], textarea');
+    if (!input || input.dataset.bbsHandler) return;
+    
+    input.dataset.bbsHandler = 'true';
+    input.placeholder = conversationStep === 0 ? "👤 Your name to start..." : "Type your response...";
+    
+    const handler = function(e) {
+      if (e.key === 'Enter' && !liveRepActive) {
+        const text = this.value.trim();
+        if (text) {
+          addBotMessage(text, widget, true); // User message
+          setTimeout(() => processUserResponse(text, widget), 400);
+          this.value = '';
+        }
+      }
+    };
+    
+    input.onkeypress = handler;
+    input.oninput = () => {
+      if (liveRepActive) input.placeholder = "💬 Chat with live rep...";
+    };
+  }
+
+  // Process conversation steps
+  function processUserResponse(text, widget) {
+    const lowerText = text.toLowerCase().trim();
+    
+    if (liveRepActive) {
+      addBotMessage("👨‍💼 Live rep can see this message!", widget);
+      return;
+    }
+
+    switch(conversationStep) {
+      case 0: // Name
+        userData.name = text;
+        conversationStep = 1;
+        addBotMessage(`👋 Hi <strong>${text}</strong>!<br><br>📧 What's your email address?`, widget);
+        break;
+        
+      case 1: // Email  
+        if (text.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+          userData.email = text;
+          conversationStep = 2;
+          addPhonePrompt(widget);
+        } else {
+          addBotMessage("❌ Please use valid email (name@domain.com)", widget);
+        }
+        break;
+        
+      case 2: // Phone
+        const cleanPhone = text.replace(/\D/g, '');
+        if (cleanPhone.length >= 10) {
+          userData.phone = userData.country + cleanPhone;
+          conversationStep = 3;
+          addInterestsPrompt(widget);
+        } else {
+          addBotMessage("❌ Phone needs 10+ digits. Try: 5551234567", widget);
+        }
+        break;
+        
+      case 3: // Interests
+        userData.interests = text;
+        conversationStep = 4;
+        showHandoverScreen(widget);
+        break;
+    }
+  }
+
+  // Phone input with country selector
+  function addPhonePrompt(widget) {
+    const phoneUI = `
+      📞 Enter your phone number:<br><br>
+      <div style="margin: 12px 0; padding: 12px; background: #f8fafc; border-radius: 12px; font-size: 13px;">
+        <select id="country-select-${Date.now()}" style="padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 13px; margin-right: 8px; min-width: 110px;">
+          ${countryCodes.map(c => `<option value="${c.code}" ${c.code === '+1' ? 'selected' : ''}>${c.name}</option>`).join('')}
+        </select>
+        <input id="phone-input-${Date.now()}" placeholder="5551234567" maxlength="15" style="padding: 8px 12px; border: 1px solid #d1d5db; border-radius: 8px; width: 130px; font-size: 13px;">
+      </div>
+      <small style="color: #6b7280;">📲 Sales will call within 24h • Live chat if rep available</small>
+    `;
+    addBotMessage(phoneUI, widget);
+    
+    setTimeout(() => {
+      const countrySel = document.getElementById(`country-select-${Date.now()}`);
+      const phoneInp = document.getElementById(`phone-input-${Date.now()}`);
+      if (countrySel) countrySel.onchange = (e) => userData.country = e.target.value;
+      if (phoneInp) {
+        phoneInp.onkeypress = (e) => e.key === 'Enter' && processUserResponse(phoneInp.value, widget);
+      }
+    }, 200);
+  }
+
+  function addInterestsPrompt(widget) {
+    addBotMessage(`
+      🎯 What brings you here?<br><br>
+      🔹 AI Solutions<br>🔹 AR/VR Experiences<br>🔹 Custom Development<br>🔹 Partnership<br><br>
+      <em>Or describe your project!</em>
+    `, widget);
+  }
+
+  function showHandoverScreen(widget) {
+    const summary = `
+      <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 16px; border-radius: 12px; margin: 8px 0;">
+        <strong>✅ Info Collected!</strong><br><br>
+        👤 <strong>${userData.name}</strong><br>
+        📧 ${userData.email}<br>
+        📞 ${userData.phone}<br>
+        🎯 ${userData.interests}
+      </div>
+      <div style="padding: 12px; background: #fef3c7; border-radius: 8px; border-left: 4px solid #f59e0b;">
+        👨‍💼 <strong>Live Rep Handover</strong><br>
+        Your info sent to sales@bbsoman.com<br>
+        Continue chatting - rep will join if available!
+      </div>
+    `;
+    addBotMessage(summary, widget);
+    
+    // Email backup
+    sendLeadEmail();
+  }
+
+  async function sendLeadEmail() {
+    // Formspree backup (optional)
+    const data = new URLSearchParams({
+      name: userData.name,
+      email: userData.email,
+      phone: userData.phone,
+      interests: userData.interests,
+      '_subject': 'BBS Teams Chat Lead'
+    });
+    
+    try {
+      await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+        method: 'POST',
+        body: data
+      });
+    } catch(e) {}
+  }
+
+  // Initialize when widget loads
+  waitForWidget((widget) => {
+    detectLiveRep(widget);
+    setupInputHandler(widget);
+    
+    // Welcome message
+    setTimeout(() => {
+      addBotMessage(`
+        👋 <strong>Welcome to Bright Business Services!</strong><br><br>
+        <em>Connected to sales@bbsoman.com</em><br><br>
+        I'll collect your info (takes 60 seconds),<br>
+        then connect you to live rep if available:<br><br>
+        👤 Name → 📧 Email → 📞 Phone → 🎯 Interests
+      `, widget);
+    }, 800);
+  });
+
+  // CSS animations
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    #customerconnect-widget { --cc-primary-color: #3b82f6 !important; }
+  `;
+  document.head.appendChild(style);
+
+})();
+</script>
   </body>
 </html>
