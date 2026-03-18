@@ -477,6 +477,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'United States',
       website: 'https://www.nearstream.us/',
     },
+   {
+  logo: 'napster.png', // Add the Napster AI logo image to your project
+  logoSize: 'h-12 w-21',
+  description:
+    'AI-powered enterprise solutions revolutionizing business operations and customer experiences.',
+  keyServices: [
+    'AI Automation',
+    'Customer Experience',
+    'Business Intelligence',
+    'Enterprise AI Solutions',
+  ],
+  specialties: [
+    'Enterprise AI',
+    'Business Transformation',
+    'Customer Engagement',
+  ],
+  color: 'from-purple-500 to-pink-500',
+  established: '2023',
+  headquarters: 'United States',
+  website: 'https://www.napster.ai/',
+},
   ];
 
   const partnershipBenefits = [
@@ -624,6 +645,8 @@ const PartnersPage: React.FC = () => {
                           ? '/go-nitro-solutions'
                           : partner.logo.includes('nearstream')
                           ? '/nearstream-solutions'
+                          : partner.logo.includes('napster.png')
+                          ? '/napster-solutions'
                           : '#'
                       }
                       className="flex-1 bg-white text-gray-900 py-2.5 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105 text-sm"
