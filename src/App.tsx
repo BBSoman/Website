@@ -27,6 +27,7 @@ import NearitySolutionsPage from './pages/NearitySolutionsPage';
 import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
 import GoNitroPage from './pages/GoNitroPage';
 import NearstreamSolutionsPage from './pages/NearstreamSolutionsPage';
+import NapsterSolutionsPage from './pages/NapsterSolutionsPage'; 
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
        <Route path="/weblib-solutions" element={<WeblibSolutionsPage />} />
        <Route path="/go-nitro-solutions" element={<GoNitroPage />} />
        <Route path="/nearstream-solutions" element={<NearstreamSolutionsPage />} />
+       <Route path="/napster-solutions" element={<NapsterSolutionsPage />} />
       </Routes>
     </div>
   );
