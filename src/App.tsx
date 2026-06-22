@@ -28,7 +28,7 @@ import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
 import GoNitroPage from './pages/GoNitroPage';
 import NearstreamSolutionsPage from './pages/NearstreamSolutionsPage';
 import NapsterSolutionsPage from './pages/NapsterSolutionsPage'; 
-import TermsAndConditionsPage from './pages/TermsAndConditionsPge';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 
 function App() {
   return (
