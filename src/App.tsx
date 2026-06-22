@@ -28,6 +28,7 @@ import WeblibSolutionsPage from './pages/WeblibSolutionsPage';
 import GoNitroPage from './pages/GoNitroPage';
 import NearstreamSolutionsPage from './pages/NearstreamSolutionsPage';
 import NapsterSolutionsPage from './pages/NapsterSolutionsPage'; 
+import TermsAndConditionsPage from './pages/TermsAndConditionsPge';
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
        <Route path="/go-nitro-solutions" element={<GoNitroPage />} />
        <Route path="/nearstream-solutions" element={<NearstreamSolutionsPage />} />
        <Route path="/napster-solutions" element={<NapsterSolutionsPage />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditionsPage/>}/>
       </Routes>
     </div>
   );
