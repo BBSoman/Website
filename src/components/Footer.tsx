@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/src/pages/TermsAndConditionsPage.tsx" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
