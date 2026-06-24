@@ -30,6 +30,7 @@ import NearstreamSolutionsPage from './pages/NearstreamSolutionsPage';
 import NapsterSolutionsPage from './pages/NapsterSolutionsPage'; 
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage;
+import CookiesPolicyPage from './pages/CookiesPolicyPage;
 
 function App() {
   return (
@@ -82,7 +83,8 @@ function App() {
        <Route path="/nearstream-solutions" element={<NearstreamSolutionsPage />} />
        <Route path="/napster-solutions" element={<NapsterSolutionsPage />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditionsPage/>}/>
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage/>}/}
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage/>}/>
+        <Route path="/cookies-policy" element={<CookiesPolicyPage/>}/>
       </Routes>
     </div>
   );
