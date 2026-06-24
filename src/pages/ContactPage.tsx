@@ -58,7 +58,7 @@ const ContactPage: React.FC = () => {
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: 'info@bbsoman.com',
+        to_email: 'chitra@bbst.ai',
       };
 
       // Send email using EmailJS
