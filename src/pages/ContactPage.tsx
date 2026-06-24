@@ -165,7 +165,7 @@ const ContactPage: React.FC = () => {
                         Email
                       </h4>
                       <p className="text-gray-600">
-                        info@bbsoman.com / sales@bbsoman.com
+                         media@bbst.ai / support@bbst.ai / chitra@bbst.ai
                       </p>
                     </div>
                   </div>
