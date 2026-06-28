@@ -500,7 +500,7 @@ const PartnersPage: React.FC = () => {
 },
     {
       logo: 'disruptx.png', // Add the Disrupt-X logo image to your project
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-15 w-21',
       description:
         'AI and IoT-powered enterprise platform transforming commercial real estate and facility operations.',
       keyServices: [
