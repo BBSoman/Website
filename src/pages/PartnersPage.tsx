@@ -500,7 +500,7 @@ const PartnersPage: React.FC = () => {
 },
     {
       logo: 'disruptx.png', // Add the Disrupt-X logo image to your project
-      logoSize: 'h-12 w-23',
+      logoSize: 'h-14 w-23',
       description:
         'AI and IoT-powered enterprise platform transforming commercial real estate and facility operations.',
       keyServices: [
@@ -542,7 +542,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'cactus.png', // Add the Cactus Creatives logo image to your project
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-14 w-23',
       description:
         'Official Meta Business Partner delivering enterprise software, AI, and digital innovation solutions since 2007.',
       keyServices: [
