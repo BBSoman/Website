@@ -498,6 +498,69 @@ const PartnersPage: React.FC = () => {
   headquarters: 'United States',
   website: 'https://www.napster.ai/',
 },
+    {
+      logo: 'disruptx.png', // Add the Disrupt-X logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'AI and IoT-powered enterprise platform transforming commercial real estate and facility operations.',
+      keyServices: [
+        'ALEF 360° CAFM / CMMS',
+        'Integrated Building Management (iBMS)',
+        'IoT Asset & Utility Monitoring',
+        'AI-Powered Facility Agent',
+      ],
+      specialties: [
+        'Enterprise AI',
+        'IoT Integration',
+        'Smart Facility Management',
+      ],
+      color: 'from-sky-500 to-indigo-500',
+      established: '2020',
+      headquarters: 'United Arab Emirates',
+      website: 'https://disrupt-x.io/',
+    },
+    {
+      logo: 'camsense.png', // Add the Camsense AI logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'No-code AI video analytics platform that turns ordinary cameras into intelligent security systems.',
+      keyServices: [
+        'Face & Emotion Recognition',
+        'People Counting & Crowd Analysis',
+        'License Plate Recognition (ANPR)',
+        'PPE & Safety Compliance Detection',
+      ],
+      specialties: [
+        'AI Video Analytics',
+        'No-Code Surveillance',
+        'Safety & Compliance',
+      ],
+      color: 'from-slate-600 to-cyan-500',
+      established: '2023',
+      headquarters: 'India',
+      website: 'https://camsenseai.com/',
+    },
+    {
+      logo: 'cactus.png', // Add the Cactus Creatives logo image to your project
+      logoSize: 'h-12 w-21',
+      description:
+        'Official Meta Business Partner delivering enterprise software, AI, and digital innovation solutions since 2007.',
+      keyServices: [
+        'Enterprise Software Development',
+        'WhatsApp Business Solutions',
+        'AI & IoT Solutions',
+        'Mobile App & UI/UX Development',
+      ],
+      specialties: [
+        'Enterprise Solutions',
+        'Artificial Intelligence',
+        'AR/VR/Metaverse',
+      ],
+      color: 'from-green-600 to-lime-500',
+      established: '2007',
+      headquarters: 'India',
+      website: 'https://cactuscreatives.com/',
+    },
   ];
 
   const partnershipBenefits = [
