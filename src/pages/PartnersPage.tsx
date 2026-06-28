@@ -542,7 +542,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'cactus.png', // Add the Cactus Creatives logo image to your project
-      logoSize: 'h-17 w-22',
+      logoSize: 'h-17 w-25',
       description:
         'Official Meta Business Partner delivering enterprise software, AI, and digital innovation solutions since 2007.',
       keyServices: [
