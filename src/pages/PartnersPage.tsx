@@ -336,7 +336,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://polytron.ai/',
     },
     {
-      logo: 'vizzio copy.png', // Make sure to add the logo image in your project
+      logo: 'vizzio1.png', // Make sure to add the logo image in your project
       logoSize: 'h-10 w-21',
       description:
         'Revolutionizing the world with 3D digital twins and AI-powered solutions for urban environments.',
