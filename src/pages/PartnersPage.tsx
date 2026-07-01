@@ -394,7 +394,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://mago.io/',
     },
     {
-      logo: 'nearity.png', // Add the Nearity logo image to your project
+      logo: 'nearity1.png', // Add the Nearity logo image to your project
       logoSize: 'h-13 w-18',
       description:
         'Advanced spatial computing and proximity-based technology solutions for immersive experiences.',
@@ -415,7 +415,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.nearity.co/',
     },
     {
-      logo: 'weblib.png', // Add the Weblib logo image to your project
+      logo: 'weblib1.png', // Add the Weblib logo image to your project
       logoSize: 'h-12 w-22',
       description:
         'Innovative web library solutions for seamless digital experiences and content management.',
