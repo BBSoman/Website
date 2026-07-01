@@ -262,7 +262,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.viverse.com/',
     },
     {
-      logo: 'greigns.png',
+      logo: 'g reigns1.png',
       logoSize: 'h-11 w-21',
       description:
         'Provider of advanced networking solutions and services for businesses.',
