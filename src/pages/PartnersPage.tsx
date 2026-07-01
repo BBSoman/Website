@@ -395,7 +395,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'nearity1.png', // Add the Nearity logo image to your project
-      logoSize: 'h-13 w-18',
+      logoSize: 'h-10 w-18',
       description:
         'Advanced spatial computing and proximity-based technology solutions for immersive experiences.',
       keyServices: [
