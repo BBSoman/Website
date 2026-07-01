@@ -457,7 +457,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.gonitro.com/',
     },
     {
-       logo: 'nearstream.png', // Add the Nearstream logo image to your project
+       logo: 'nearstream1.png', // Add the Nearstream logo image to your project
       logoSize: 'h-17 w-21',
       description:
         'Advanced streaming solutions for real-time data and media delivery.',
@@ -478,7 +478,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.nearstream.us/',
     },
    {
-  logo: 'napster.png', // Add the Napster AI logo image to your project
+  logo: 'napster1.png', // Add the Napster AI logo image to your project
   logoSize: 'h-12 w-21',
   description:
     'AI-powered enterprise solutions revolutionizing business operations and customer experiences.',
