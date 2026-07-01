@@ -416,7 +416,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'weblib1.png', // Add the Weblib logo image to your project
-      logoSize: 'h-14 w-22',
+      logoSize: 'h-16 w-22',
       description:
         'Innovative web library solutions for seamless digital experiences and content management.',
       keyServices: [
@@ -436,7 +436,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://weblib.com/',
     },
     {
-      logo: 'gonitro.png', // Add the Nitro PDF logo image to your project
+      logo: 'nitro1.png', // Add the Nitro PDF logo image to your project
       logoSize: 'h-12 w-21',
       description:
         'Leading provider of PDF productivity solutions for creating, editing, and managing documents.',
