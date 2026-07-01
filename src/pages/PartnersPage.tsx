@@ -337,7 +337,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'vizzio1.png', // Make sure to add the logo image in your project
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-8 w-21',
       description:
         'Revolutionizing the world with 3D digital twins and AI-powered solutions for urban environments.',
       keyServices: [
