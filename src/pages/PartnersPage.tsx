@@ -562,7 +562,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://cactuscreatives.com/',
     },
     {
-  logo: 'unity.jpg', // Add the Unity logo image to your project
+  logo: 'unity.png', // Add the Unity logo image to your project
   logoSize: 'h-12 w-21',
   description:
     'Leading real-time 3D development platform for games, simulations, and interactive experiences.',
