@@ -416,7 +416,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'weblib1.png', // Add the Weblib logo image to your project
-      logoSize: 'h-10 w-22',
+      logoSize: 'h-12 w-22',
       description:
         'Innovative web library solutions for seamless digital experiences and content management.',
       keyServices: [
