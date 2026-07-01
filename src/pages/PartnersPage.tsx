@@ -242,7 +242,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'viverse1.png', // Make sure to add the logo image in your project
-      logoSize: 'h-10 w-70',
+      logoSize: 'h-11 w-70',
       description:
         'Innovative platform for immersive virtual experiences and digital content creation.',
       keyServices: [
