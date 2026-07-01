@@ -224,7 +224,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.nuera.com/',
     },
     {
-      logo: 'zeevee copy.png', // Make sure to add the logo image in your project
+      logo: 'zeevee1.png', // Make sure to add the logo image in your project
       logoSize: 'h-11 w-13',
       description:
         'Leading provider of video distribution solutions for professional AV.',
