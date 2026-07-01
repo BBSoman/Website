@@ -241,7 +241,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://www.zeevee.com/',
     },
     {
-      logo: 'viverse copy.png', // Make sure to add the logo image in your project
+      logo: 'viverse1.png', // Make sure to add the logo image in your project
       logoSize: 'h-11 w-70',
       description:
         'Innovative platform for immersive virtual experiences and digital content creation.',
