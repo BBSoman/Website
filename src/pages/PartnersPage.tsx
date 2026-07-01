@@ -25,7 +25,7 @@ import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partners = [
     {
-      logo: 'Boe_Technology_Group_logo.svg.png',
+      logo: 'boe1.png',
       logoSize: 'h-12 w-21 ',
       description: 'Global leader in display technology.',
       keyServices: [
@@ -56,7 +56,7 @@ const PartnersPage: React.FC = () => {
       },
     },
     {
-      logo: 'Vive-logo.png',
+      logo: 'vive1.png',
       logoSize: 'h-7 w-21',
       description:
         'Leading VR headset manufacturer and AR/VR innovation pioneer.',
