@@ -479,7 +479,7 @@ const PartnersPage: React.FC = () => {
     },
    {
   logo: 'napster1.png', // Add the Napster AI logo image to your project
-  logoSize: 'h-12 w-21',
+  logoSize: 'h-10 w-21',
   description:
     'AI-powered enterprise solutions revolutionizing business operations and customer experiences.',
   keyServices: [
