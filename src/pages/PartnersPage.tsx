@@ -437,7 +437,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'nitro1.png', // Add the Nitro PDF logo image to your project
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-10 w-21',
       description:
         'Leading provider of PDF productivity solutions for creating, editing, and managing documents.',
       keyServices: [
