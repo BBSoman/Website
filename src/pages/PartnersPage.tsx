@@ -561,6 +561,27 @@ const PartnersPage: React.FC = () => {
       headquarters: 'India',
       website: 'https://cactuscreatives.com/',
     },
+    {
+  logo: 'unity.png', // Add the Unity logo image to your project
+  logoSize: 'h-12 w-21',
+  description:
+    'Leading real-time 3D development platform for games, simulations, and interactive experiences.',
+  keyServices: [
+    'Real-Time 3D Engine',
+    'AR/VR Development',
+    'Digital Twins',
+    'Cross-Platform Deployment',
+  ],
+  specialties: [
+    'Game Development',
+    'Real-Time 3D',
+    'Interactive Experiences',
+  ],
+  color: 'from-gray-700 to-gray-900',
+  established: '2004',
+  headquarters: 'United States',
+  website: 'https://unity.com/',
+},
   ];
 
   const partnershipBenefits = [
