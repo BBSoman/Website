@@ -458,7 +458,7 @@ const PartnersPage: React.FC = () => {
     },
     {
        logo: 'nearstream1.png', // Add the Nearstream logo image to your project
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-12 w-21',
       description:
         'Advanced streaming solutions for real-time data and media delivery.',
       keyServices: [
