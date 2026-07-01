@@ -95,7 +95,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://vviewtech.com/',
     },
     {
-      logo: 'automate.png',
+      logo: 'automate1.png',
       logoSize: 'h-12 w-21',
       description:
         'Advanced property automation and real estate technology solutions.',
@@ -373,7 +373,7 @@ const PartnersPage: React.FC = () => {
     },
         {
 
-      logo: 'mago2.png', // Add the Mago logo image to your project
+      logo: 'mago1.png', // Add the Mago logo image to your project
       logoSize: 'h-14 w-30',
       description:
         'AI-powered real-time translation and communication solutions for seamless multilingual interactions.',
