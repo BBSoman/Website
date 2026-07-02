@@ -500,7 +500,7 @@ const PartnersPage: React.FC = () => {
 },
     {
       logo: 'disruptx1.png', // Add the Disrupt-X logo image to your project
-      logoSize: 'h-15 w-24',
+      logoSize: 'h-17 w-24',
       description:
         'AI and IoT-powered enterprise platform transforming commercial real estate and facility operations.',
       keyServices: [
@@ -563,7 +563,7 @@ const PartnersPage: React.FC = () => {
     },
     {
   logo: 'unity.png', // Add the Unity logo image to your project
-  logoSize: 'h-12 w-21',
+  logoSize: 'h-10 w-21',
   description:
     'Leading real-time 3D development platform for games, simulations, and interactive experiences.',
   keyServices: [
