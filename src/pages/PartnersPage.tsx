@@ -499,7 +499,7 @@ const PartnersPage: React.FC = () => {
   website: 'https://www.napster.ai/',
 },
     {
-      logo: 'disruptx.png', // Add the Disrupt-X logo image to your project
+      logo: 'disruptx1.png', // Add the Disrupt-X logo image to your project
       logoSize: 'h-15 w-24',
       description:
         'AI and IoT-powered enterprise platform transforming commercial real estate and facility operations.',
@@ -541,7 +541,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://camsenseai.com/',
     },
     {
-      logo: 'cactus.png', // Add the Cactus Creatives logo image to your project
+      logo: 'cactus1.png', // Add the Cactus Creatives logo image to your project
       logoSize: 'h-15 w-24',
       description:
         'Official Meta Business Partner delivering enterprise software, AI, and digital innovation solutions since 2007.',
