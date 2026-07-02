@@ -204,25 +204,25 @@ const PartnersPage: React.FC = () => {
         ],
       },
     },
-    {
-      logo: 'nuera copy.png',
-      logoSize: 'h-11 w-21',
-      description:
-        'Provider of advanced communication solutions for businesses, enhancing connectivity.',
-      keyServices: [
-        'Unified Communications',
-        'VoIP Solutions',
-        'Collaboration Tools',
-        'Network Infrastructure',
-      ],
-      specialties: [
-        'Business Communication',
-        'Cloud Solutions',
-        'Network Security',
-      ],
-      color: 'from-blue-500 to-purple-500',
-      website: 'https://www.nuera.com/',
-    },
+    // {
+    //   logo: 'nuera copy.png',
+    //   logoSize: 'h-11 w-21',
+    //   description:
+    //     'Provider of advanced communication solutions for businesses, enhancing connectivity.',
+    //   keyServices: [
+    //     'Unified Communications',
+    //     'VoIP Solutions',
+    //     'Collaboration Tools',
+    //     'Network Infrastructure',
+    //   ],
+    //   specialties: [
+    //     'Business Communication',
+    //     'Cloud Solutions',
+    //     'Network Security',
+    //   ],
+    //   color: 'from-blue-500 to-purple-500',
+    //   website: 'https://www.nuera.com/',
+    // },
     {
       logo: 'zeevee1.png', // Make sure to add the logo image in your project
       logoSize: 'h-11 w-13',
