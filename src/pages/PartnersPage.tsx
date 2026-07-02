@@ -521,7 +521,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'camsense.png', // Add the Camsense AI logo image to your project
-      logoSize: 'h-12 w-21',
+      logoSize: 'h-10 w-21',
       description:
         'No-code AI video analytics platform that turns ordinary cameras into intelligent security systems.',
       keyServices: [
