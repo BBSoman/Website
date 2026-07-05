@@ -352,7 +352,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://vizzio.ai/',
     },
     {
-      logo: 'xrai.png', // You'll need to add this logo to the public folder
+      logo: 'xrai1.png', // You'll need to add this logo to the public folder
       logoSize: 'h-8 w-21',
       description:
         'Revolutionary AI-powered real-time transcription and translation solutions for accessibility and communication.',
