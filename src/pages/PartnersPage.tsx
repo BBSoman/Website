@@ -96,7 +96,7 @@ const PartnersPage: React.FC = () => {
     },
     {
       logo: 'automate1.png',
-      logoSize: 'h-10 w-21',
+      logoSize: 'h-7 w-21',
       description:
         'Advanced property automation and real estate technology solutions.',
       keyServices: [
