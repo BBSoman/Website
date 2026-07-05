@@ -355,7 +355,7 @@ const PartnersPage: React.FC = () => {
       logo: 'xrai1.png', // You'll need to add this logo to the public folder
       logoSize: 'h-8 w-21',
       description:
-        'Revolutionary AI-powered real-time transcription and translation solutions for accessibility and communication.',
+        'Revolutionary AI-powered real-time transcription and translation solutions.',
       keyServices: [
         'Real-time Subtitles',
         'Multilingual Translation',
