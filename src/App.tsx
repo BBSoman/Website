@@ -31,6 +31,7 @@ import NapsterSolutionsPage from './pages/NapsterSolutionsPage';
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import CookiesPolicyPage from './pages/CookiesPolicyPage';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
        <Route path="/cookies-policy" element={<CookiesPolicyPage />} />
       </Routes>
+      <CookieConsent />
     </div>
   );
 }
