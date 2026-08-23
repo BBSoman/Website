@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import {
   Mail,
   Phone,
@@ -8,6 +8,7 @@ import {
   CheckCircle,
   User,
   Building,
+  MessageCircle,
   MessageSquare,
   ArrowLeft,
 } from 'lucide-react';
@@ -15,18 +16,103 @@ import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+/**
+ * CTAs elsewhere on the site link here with context, e.g.
+ *   /contact?brand=Netgear
+ *   /contact?brand=BOE&product=BTQ%20Series&intent=demo
+ *   /contact?email=someone@example.com&intent=newsletter
+ * These params pre-fill the form so the visitor does not retype what they
+ * were already looking at.
+ */
+const buildPrefilledMessage = (
+  brand: string,
+  product: string,
+  intent: string
+): string => {
+  if (intent === 'newsletter') {
+    return 'Please add me to your mailing list for news and product updates.';
+  }
+  if (product && brand) {
+    return `I would like more information about ${product} (${brand}).`;
+  }
+  if (product) {
+    return `I would like more information about ${product}.`;
+  }
+  if (brand) {
+    return `I would like more information about ${brand} products and solutions.`;
+  }
+  return '';
+};
+
+/**
+ * Oman country code (968) followed by the 8-digit number (92882417). WhatsApp
+ * wants digits only - no leading "+", spaces or national trunk zero. Used for
+ * both the WhatsApp link and the click-to-call link so the two cannot drift.
+ */
+/**
+ * Where submitted enquiries land. EmailJS only honours this if the template's
+ * "To" field in the EmailJS dashboard is set to {{to_email}} - if that field
+ * has a hard-coded address instead, this value is ignored and the mail keeps
+ * going wherever the template says.
+ */
+const FORM_RECIPIENT = 'support@bbst.ai';
+
+const COUNTRY_CODE = '968';
+const NATIONAL_NUMBER = '92882417';
+const PHONE_DIGITS = `${COUNTRY_CODE}${NATIONAL_NUMBER}`;
+const PHONE_DISPLAY = `+${COUNTRY_CODE} ${NATIONAL_NUMBER}`;
+
+/**
+ * WhatsApp publishes two click-to-chat hosts. The wa.me shortener is the
+ * better known one, but it is a separate domain that some networks and DNS
+ * resolvers fail to resolve at all - it returns NXDOMAIN rather than a block
+ * page, so the visitor just sees "this site can't be reached". api.whatsapp.com
+ * lives under the main whatsapp.com domain and behaves identically, redirecting
+ * to the app when it is installed and to WhatsApp Web when it is not.
+ */
+const whatsappLink = (message: string) =>
+  `https://api.whatsapp.com/send?phone=${PHONE_DIGITS}&text=${encodeURIComponent(
+    message
+  )}`;
+
+const INTENT_TO_SERVICE: Record<string, string> = {
+  quote: 'sales',
+  sales: 'sales',
+  demo: 'demo',
+  consultation: 'consultant',
+  consultant: 'consultant',
+  support: 'Support',
+  media: 'Media',
+  newsletter: 'other',
+};
+
 const ContactPage: React.FC = () => {
+  const [searchParams] = useSearchParams();
+  const prefillBrand = searchParams.get('brand') || '';
+  const prefillProduct = searchParams.get('product') || '';
+  const prefillIntent = searchParams.get('intent') || '';
+
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    email: searchParams.get('email') || '',
     company: '',
     phone: '',
-    service: '',
-    message: '',
+    service: INTENT_TO_SERVICE[prefillIntent.toLowerCase()] || '',
+    message: buildPrefilledMessage(prefillBrand, prefillProduct, prefillIntent),
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+
+  /**
+   * WhatsApp opens with the same message the form would have been pre-filled
+   * with, so someone who arrived from a product page does not have to explain
+   * what they were looking at.
+   */
+  const whatsappHref = whatsappLink(
+    buildPrefilledMessage(prefillBrand, prefillProduct, prefillIntent) ||
+      'Hello Bright Business Services, I would like to know more about your solutions.'
+  );
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -58,7 +144,7 @@ const ContactPage: React.FC = () => {
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: 'chitra@bbst.ai',
+        to_email: FORM_RECIPIENT,
       };
 
       // Send email using EmailJS
@@ -165,7 +251,19 @@ const ContactPage: React.FC = () => {
                         Email
                       </h4>
                       <p className="text-gray-600">
-                         media@bbst.ai / support@bbst.ai / chitra@bbst.ai
+                        {['media@bbst.ai', 'support@bbst.ai', 'chitra@bbst.ai'].map(
+                          (address, index) => (
+                            <React.Fragment key={address}>
+                              {index > 0 && ' / '}
+                              <a
+                                href={`mailto:${address}`}
+                                className="hover:text-blue-600 hover:underline transition-colors"
+                              >
+                                {address}
+                              </a>
+                            </React.Fragment>
+                          )
+                        )}
                       </p>
                     </div>
                   </div>
@@ -178,7 +276,23 @@ const ContactPage: React.FC = () => {
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Phone
                       </h4>
-                      <p className="text-gray-600">+968 92882417</p>
+                      <p className="text-gray-600">
+                        <a
+                          href={`tel:+${PHONE_DIGITS}`}
+                          className="hover:text-purple-600 hover:underline transition-colors"
+                        >
+                          {PHONE_DISPLAY}
+                        </a>
+                      </p>
+                      <a
+                        href={whatsappHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center mt-3 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-all transform hover:scale-105 shadow-sm hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                      >
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Chat on WhatsApp
+                      </a>
                     </div>
                   </div>
 
@@ -190,10 +304,15 @@ const ContactPage: React.FC = () => {
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Office
                       </h4>
-                      <p className="text-gray-600">
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=Dohat+Al+Adab+Street,+Al+Khuwair+South,+Muscat+133,+Oman"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-green-700 hover:underline transition-colors"
+                      >
                         Level 4, Business Center, Building #325 Office #411,
                         Dohat Al Adab Street, Al Khuwair South, Muscat 133, Oman
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>
