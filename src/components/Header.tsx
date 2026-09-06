@@ -11,7 +11,7 @@ import {
   useNavigate,
   useNavigationType,
 } from 'react-router-dom';
-import { Menu, Moon, Sun, X } from 'lucide-react';
+import { ExternalLink, Menu, Moon, Sun, X } from 'lucide-react';
 
 /* ==========================================================================
    Light / dark theme
@@ -602,6 +602,17 @@ const Header: React.FC = () => {
               Contact
             </Link>
 
+            {/* Sister site - opens in its own tab so visitors keep this one */}
+            <a
+              href="https://bbst.global"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+            >
+              Trading
+              <ExternalLink className="w-4 h-4" aria-hidden="true" />
+            </a>
+
             <ThemeToggle />
 
             <button
@@ -642,6 +653,16 @@ const Header: React.FC = () => {
               <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Contact
               </Link>
+              <a
+                href="https://bbst.global"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-1.5 border border-blue-600 text-blue-600 px-4 py-2.5 rounded-lg hover:bg-blue-50 transition-colors w-full font-medium"
+              >
+                Trading
+                <ExternalLink className="w-4 h-4" aria-hidden="true" />
+              </a>
               <button
                 onClick={handleGetStarted}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2.5 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all w-full font-medium"
