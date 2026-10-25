@@ -613,6 +613,17 @@ const Header: React.FC = () => {
               <ExternalLink className="w-4 h-4" aria-hidden="true" />
             </a>
 
+          {/* Partner portal - opens in its own tab */}
+          <a
+            href="https://partners.bbst.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+          >
+            Partner Portal
+            <ExternalLink className="w-4 h-4" aria-hidden="true" />
+          </a>
+
             <ThemeToggle />
 
             <button
