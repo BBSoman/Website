@@ -663,6 +663,16 @@ const Header: React.FC = () => {
                 Trading
                 <ExternalLink className="w-4 h-4" aria-hidden="true" />
               </a>
+              <a
+                href="https://partners.bbst.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className="inline-flex items-center justify-center gap-1.5 border border-blue-600 text-blue-600 px-4 py-2.5 rounded-lg hover:bg-blue-50 transition-colors w-full font-medium"
+              >
+                Partner Portal
+                <ExternalLink className="w-4 h-4" aria-hidden="true" />
+              </a>
               <button
                 onClick={handleGetStarted}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2.5 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all w-full font-medium"
