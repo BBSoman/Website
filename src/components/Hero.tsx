@@ -41,13 +41,13 @@ const SLIDES: Array<{ id: string; bg: string; soft?: boolean }> = [
 ];
 
 /** Faint drifting glyphs, scattered across the hero. */
- const GLYPHS = [
-   { Icon: Brain, className: "top-[18%] left-[6%] h-16 w-16", delay: "0s" },
-   { Icon: Boxes, className: "top-[64%] left-[12%] h-14 w-14", delay: "-3s" },
-   { Icon: Radio, className: "top-[30%] right-[8%] h-16 w-16", delay: "-6s" },
-   { Icon: Cpu, className: "bottom-[16%] right-[16%] h-20 w-20", delay: "-9s" },
-   { Icon: Waves, className: "top-[8%] right-[32%] h-12 w-12", delay: "-12s" },
- ];
+ // const GLYPHS = [
+ //   { Icon: Brain, className: "top-[18%] left-[6%] h-16 w-16", delay: "0s" },
+ //   { Icon: Boxes, className: "top-[64%] left-[12%] h-14 w-14", delay: "-3s" },
+ //   { Icon: Radio, className: "top-[30%] right-[8%] h-16 w-16", delay: "-6s" },
+ //   { Icon: Cpu, className: "bottom-[16%] right-[16%] h-20 w-20", delay: "-9s" },
+ //   { Icon: Waves, className: "top-[8%] right-[32%] h-12 w-12", delay: "-12s" },
+ // ];
 
 /** Anything that can sit in a badge: lucide icons and the local SVG below. */
 type OrbitIcon = React.FC<{ className?: string }>;
@@ -363,7 +363,7 @@ const Hero: React.FC = () => {
       <div className="absolute right-10 top-1/3 z-0 h-72 w-72 animate-pulse rounded-full bg-purple-500 opacity-20 blur-3xl delay-1000" />
 
       {/* Drifting tech glyphs */}
-      <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+      {/* <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
         {GLYPHS.map(({ Icon, className, delay }, i) => (
           <Icon
             key={i}
@@ -372,7 +372,7 @@ const Hero: React.FC = () => {
             className={`bbs-hero-float absolute text-white/15 ${className}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Floating product cut-out (transparent PNG) */}
       <img
