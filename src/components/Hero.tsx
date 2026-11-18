@@ -32,16 +32,12 @@ const SLIDES: Array<{ id: string; bg: string; soft?: boolean }> = [
     // No photograph on this slide by design. It used to be 'vr.jpg.jpg', a
     // two-portrait composite; the people competed with the headline and the
     // globe, so the gradient carries it instead.
-    id: "gradient",
-    bg: [
-      "radial-gradient(90% 80% at 78% 42%, rgba(59,130,246,0.42), transparent 62%)",
-      "radial-gradient(70% 70% at 12% 78%, rgba(139,92,246,0.34), transparent 65%)",
-      "radial-gradient(50% 60% at 50% 0%, rgba(56,189,248,0.20), transparent 70%)",
-      "linear-gradient(135deg, #0b1220 0%, #172554 48%, #1e1b4b 100%)",
-    ].join(", "),
+   id: "1", bg: 'url("/1.jpg")', soft: true
   },
-  { id: "av", bg: 'url("/av.jpg")', soft: true }, // 600x400
-  { id: "ai", bg: 'url("/ai.jpg")', soft: true }, // 600x316
+  { id: "av", bg: 'url("/2.jpg")', soft: true }, // 600x400
+  { id: "ai", bg: 'url("/3.jpg")', soft: true },
+  { id: "ai", bg: 'url("/4.jpg")', soft: true },
+  { id: "ai", bg: 'url("/5.jpg")', soft: true },// 600x316
 ];
 
 /** Faint drifting glyphs, scattered across the hero. */
