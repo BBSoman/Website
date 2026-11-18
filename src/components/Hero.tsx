@@ -41,13 +41,13 @@ const SLIDES: Array<{ id: string; bg: string; soft?: boolean }> = [
 ];
 
 /** Faint drifting glyphs, scattered across the hero. */
-// const GLYPHS = [
-//   { Icon: Brain, className: "top-[18%] left-[6%] h-16 w-16", delay: "0s" },
-//   { Icon: Boxes, className: "top-[64%] left-[12%] h-14 w-14", delay: "-3s" },
-//   { Icon: Radio, className: "top-[30%] right-[8%] h-16 w-16", delay: "-6s" },
-//   { Icon: Cpu, className: "bottom-[16%] right-[16%] h-20 w-20", delay: "-9s" },
-//   { Icon: Waves, className: "top-[8%] right-[32%] h-12 w-12", delay: "-12s" },
-// ];
+ const GLYPHS = [
+   { Icon: Brain, className: "top-[18%] left-[6%] h-16 w-16", delay: "0s" },
+   { Icon: Boxes, className: "top-[64%] left-[12%] h-14 w-14", delay: "-3s" },
+   { Icon: Radio, className: "top-[30%] right-[8%] h-16 w-16", delay: "-6s" },
+   { Icon: Cpu, className: "bottom-[16%] right-[16%] h-20 w-20", delay: "-9s" },
+   { Icon: Waves, className: "top-[8%] right-[32%] h-12 w-12", delay: "-12s" },
+ ];
 
 /** Anything that can sit in a badge: lucide icons and the local SVG below. */
 type OrbitIcon = React.FC<{ className?: string }>;
