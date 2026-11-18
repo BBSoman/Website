@@ -375,14 +375,14 @@ const Hero: React.FC = () => {
       </div> */}
 
       {/* Floating product cut-out (transparent PNG) */}
-      <img
+      {/* <img
         src="/htcvr.png"
         alt=""
         aria-hidden="true"
         loading="eager"
         decoding="async"
         className="bbs-hero-drift pointer-events-none absolute bottom-[6%] left-1/2 z-0 hidden w-64 -translate-x-1/2 opacity-30 lg:left-[46%] lg:block xl:w-80"
-      />
+      /> */}
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-screen flex-col items-center justify-between py-20 lg:flex-row">
